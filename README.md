@@ -1,116 +1,109 @@
-🍄 Mushroom's Land
-🎮 Mushroom's Land é um jogo de plataforma 2D feito em JavaScript puro, utilizando apenas HTML5 Canvas e sem bibliotecas de jogos externas.
+# 🍄 Mushroom's Land
 
-Seu objetivo é simples: coletar todas as moedas e se manter vivo!
+🎮 **Mushroom's Land** é um jogo de plataforma 2D feito em **JavaScript puro**, utilizando apenas **HTML5 Canvas** e sem bibliotecas de jogos externas.
 
-🚀 Como Jogar
-Explore o mapa
+Seu objetivo é simples: **coletar todas as moedas e se manter vivo!**
 
-Colete todas as moedas
+---
 
-Evite cair na água
+## 🚀 Como Jogar
 
-Fuja (ou derrote!) as temidas bolhas de gosma azul
+- Explore o mapa
+- Colete todas as moedas
+- Evite cair na água
+- Fuja (ou derrote!) as temidas **bolhas de gosma azul**
+- Pule sobre os inimigos para derrotá-los
+- Ao coletar todas as moedas, você avança para o próximo nível  
+> ⚠️ Atualmente, o jogo possui **2 fases** disponíveis.
 
-Pule sobre os inimigos para derrotá-los
+---
 
-Ao coletar todas as moedas, você avança para o próximo nível
+## ⚙️ Controles
 
-⚠️ Atualmente, o jogo possui 2 fases disponíveis.
+| Tecla       | Ação                   |
+|-------------|------------------------|
+| `W` ou `↑`  | Pular                  |
+| `A` ou `←`  | Mover para a esquerda  |
+| `D` ou `→`  | Mover para a direita   |
 
-⚙️ Controles
-Tecla	Ação
-W ou ↑	Pular
-A ou ←	Mover para a esquerda
-D ou →	Mover para a direita
+---
 
-🛠️ Tecnologias Utilizadas
-HTML5: Estrutura da página
+## 🛠️ Tecnologias Utilizadas
 
-CSS3: Estilização básica da interface
+- **HTML5**: Estrutura da página
+- **CSS3**: Estilização básica da interface
+- **JavaScript (puro)**: Toda a lógica do jogo
+- **Canvas API**: Renderização gráfica
+- **GSAP (GreenSock)**: Animações suaves (usado no HUD e efeitos)
 
-JavaScript (puro): Toda a lógica do jogo
+---
 
-Canvas API: Renderização gráfica
+## 🧱 Estrutura do Projeto
 
-GSAP (GreenSock): Animações suaves (usado no HUD e efeitos)
-
-🧱 Estrutura do Projeto
-bash
-Copiar
-Editar
 mushrooms_land/
-├── audio/         # Trilha sonora e efeitos
-├── img/           # Sprites, tilesets, objetos
-├── index.html     # HTML principal
-├── style.css      # Estilo básico do jogo
-├── script.js      # Lógica principal do jogo
+├── audio/ # Trilha sonora e efeitos
+├── img/ # Sprites, tilesets, objetos
+├── index.html # HTML principal
+├── style.css # Estilo básico do jogo
+├── script.js # Lógica principal do jogo
 ├── js/
-│   ├── Player.js
-│   ├── Enemy.js
-│   ├── Level.js
-│   ├── Sprite.js
-│   └── ...
-└── maps/          # Dados dos mapas (fase 1 e 2)
-🧩 Componentes Principais
-👤 Jogador
-Movimentação com teclado
+│ ├── Player.js
+│ ├── Enemy.js
+│ ├── Level.js
+│ ├── Sprite.js
+│ └── ...
+└── maps/ # Dados dos mapas (fase 1 e 2)
 
-Sprites para correr, pular, se machucar e morrer
 
-Interação com inimigos e moedas
+---
 
-👾 Inimigos (Ex: bolhas de gosma)
-Comportamento de patrulha
+## 🧩 Componentes Principais
 
-Mudam de comportamento ao detectar o jogador
+### 👤 Jogador
+- Movimentação com teclado
+- Sprites para correr, pular, se machucar e morrer
+- Interação com inimigos e moedas
 
-Podem ser derrotados pulando sobre eles
+### 👾 Inimigos (Ex: bolhas de gosma)
+- Comportamento de patrulha
+- Mudam de comportamento ao detectar o jogador
+- Podem ser derrotados pulando sobre eles
 
-💰 Moedas
-Espalhadas pelo mapa
+### 💰 Moedas
+- Espalhadas pelo mapa
+- Coletáveis para avançar ao próximo nível
 
-Coletáveis para avançar ao próximo nível
+### 🗺️ Níveis
+- Baseados em mapas com tiles de 16x16 pixels
+- Contêm plataformas, moedas e inimigos
+- Progresso ao completar os objetivos
 
-🗺️ Níveis
-Baseados em mapas com tiles de 16x16 pixels
+### 🧠 HUD (Painel de Informações)
+- Corações (vidas)
+- Barra de progresso das moedas coletadas
+- Botões de pausa e reinício
 
-Contêm plataformas, moedas e inimigos
+---
 
-Progresso ao completar os objetivos
+## ⚙️ Mecânicas
 
-🧠 HUD (Painel de Informações)
-Corações (vidas)
+- **Gravidade** aplicada ao jogador e inimigos
+- **Colisão manual** com plataformas e objetos
+- **Animações por frames**, baseadas em contadores
+- **Sistema de vida e morte** com reinício automático
+- **Transição entre níveis** ao completar objetivos
 
-Barra de progresso das moedas coletadas
+---
 
-Botões de pausa e reinício
+## 🔊 Áudio
 
-⚙️ Mecânicas
-Gravidade aplicada ao jogador e inimigos
-
-Colisão manual com plataformas e objetos
-
-Animações por frames, baseadas em contadores
-
-Sistema de vida e morte com reinício automático
-
-Transição entre níveis ao completar objetivos
-
-🔊 Áudio
 Inclui efeitos e música de fundo:
 
-js
-Copiar
-Editar
-const backgroundMusic = new Audio('./audio/mystic_journey.mp3');
-backgroundMusic.loop = true;
-backgroundMusic.volume = 1.0;
 🎵 Trilha sonora ambiente
 
 💥 Efeitos de morte e vitória
 
-📌 Observações para Desenvolvedores
+🧪 Observações para Desenvolvedores
 Muitos parâmetros do jogo, como:
 
 Gravidade
