@@ -1,3 +1,5 @@
+![image](https://github.com/user-attachments/assets/d79af0e4-4e9e-498e-8ef3-81363de715df)
+
 # 🍄 Mushroom's Land
 
 🎮 **Mushroom's Land** é um jogo de plataforma 2D feito em **JavaScript puro**, utilizando apenas **HTML5 Canvas** e sem bibliotecas de jogos externas.
@@ -37,24 +39,6 @@ Seu objetivo é simples: **coletar todas as moedas e se manter vivo!**
 - **GSAP (GreenSock)**: Animações suaves (usado no HUD e efeitos)
 
 ---
-
-## 🧱 Estrutura do Projeto
-
-mushrooms_land/
-├── audio/ # Trilha sonora e efeitos
-├── img/ # Sprites, tilesets, objetos
-├── index.html # HTML principal
-├── style.css # Estilo básico do jogo
-├── script.js # Lógica principal do jogo
-├── js/
-│ ├── Player.js
-│ ├── Enemy.js
-│ ├── Level.js
-│ ├── Sprite.js
-│ └── ...
-└── maps/ # Dados dos mapas (fase 1 e 2)
-
-
 ---
 
 ## 🧩 Componentes Principais
@@ -104,14 +88,5 @@ Inclui efeitos e música de fundo:
 💥 Efeitos de morte e vitória
 
 🧪 Observações para Desenvolvedores
-Muitos parâmetros do jogo, como:
-
-Gravidade
-
-Velocidade do personagem
-
-Vida máxima
-
-Poder de ataque
-
+Muitos parâmetros do jogo, como: Gravidade, Velocidade do personagem, Vida máxima, Poder de ataque
 Podem ser facilmente ajustados nas constantes do arquivo script.js, facilitando personalizações ou melhorias.
