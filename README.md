@@ -87,6 +87,6 @@ Inclui efeitos e música de fundo:
 
 💥 Efeitos de morte e vitória
 
-🧪 Observações para Desenvolvedores
+## Observações para Desenvolvedores
 Muitos parâmetros do jogo, como: Gravidade, Velocidade do personagem, Vida máxima, Poder de ataque
 Podem ser facilmente ajustados nas constantes do arquivo script.js, facilitando personalizações ou melhorias.
