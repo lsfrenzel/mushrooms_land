@@ -1,109 +1,124 @@
-# Sobre o Jogo
-Este é um jogo de plataforma simples em JavaScript puro, sem usar bibliotecas, apenas HTML Canvas. <br>
-Seu objetivo é se mover pelo mapa e coletar todas as moedas para avançar para a próxima fase. <br>
-Mantenha-se vivo, não caia na água e não seja atacado pelas terríveis bolhas de gosma azul! <br>
-As bolhas de gosma parecerão dormentes, mas começarão a se mover em sua direção se você entrar em seu campo de visão. <br>
-Você pode se livrar delas pulando sobre elas. <br>
-(Até o momento, existem duas fases.) <br>
- 
+🍄 Mushroom's Land
+🎮 Mushroom's Land é um jogo de plataforma 2D feito em JavaScript puro, utilizando apenas HTML5 Canvas e sem bibliotecas de jogos externas.
 
-__Observação__:
-Muitos controles importantes, como gravidade, velocidade, vida máxima, poder de ataque, etc., podem ser controlados usando as constantes
-que são definidas no início de script.js.
+Seu objetivo é simples: coletar todas as moedas e se manter vivo!
 
-__Guia de Desenvolvimento do Jogo Mushroom's Land__:
+🚀 Como Jogar
+Explore o mapa
 
-Visão Geral
+Colete todas as moedas
 
-Mushroom's Land é um jogo de plataforma 2D desenvolvido utilizando HTML5, JavaScript puro e a tag <canvas> do HTML para renderização dos gráficos. O jogo foi concebido para simular um ambiente clássico de aventura, com um personagem principal que coleta moedas, derrota inimigos e avança por diferentes níveis.
+Evite cair na água
 
-Tecnologias Utilizadas
+Fuja (ou derrote!) as temidas bolhas de gosma azul
 
-HTML5: Estrutura do documento.
+Pule sobre os inimigos para derrotá-los
 
-CSS3: Estilização básica (pouco utilizado).
+Ao coletar todas as moedas, você avança para o próximo nível
 
-JavaScript: Toda a lógica do jogo é escrita em JS puro.
+⚠️ Atualmente, o jogo possui 2 fases disponíveis.
 
-Canvas API: Para renderização de sprites, cenários e animações.
+⚙️ Controles
+Tecla	Ação
+W ou ↑	Pular
+A ou ←	Mover para a esquerda
+D ou →	Mover para a direita
 
-GSAP (GreenSock Animation Platform): Biblioteca para animações suaves (usada no HUD e efeitos).
+🛠️ Tecnologias Utilizadas
+HTML5: Estrutura da página
 
-Estrutura do Projeto
+CSS3: Estilização básica da interface
 
+JavaScript (puro): Toda a lógica do jogo
+
+Canvas API: Renderização gráfica
+
+GSAP (GreenSock): Animações suaves (usado no HUD e efeitos)
+
+🧱 Estrutura do Projeto
+bash
+Copiar
+Editar
 mushrooms_land/
-|-- audio/                      # Arquivos de som (trilha, efeitos)
-|-- img/                        # Sprites e folhas de sprites (tilesets, inimigos, etc)
-|-- index.html                  # HTML principal
-|-- style.css                   # CSS básico
-|-- main.js                     # Arquivo principal com a lógica do jogo
-|-- classes/                    # Classes JavaScript (Player, Level, Enemy, Sprite, etc)
-|-- maps/                       # Dados dos mapas e posicionamento
+├── audio/         # Trilha sonora e efeitos
+├── img/           # Sprites, tilesets, objetos
+├── index.html     # HTML principal
+├── style.css      # Estilo básico do jogo
+├── script.js      # Lógica principal do jogo
+├── js/
+│   ├── Player.js
+│   ├── Enemy.js
+│   ├── Level.js
+│   ├── Sprite.js
+│   └── ...
+└── maps/          # Dados dos mapas (fase 1 e 2)
+🧩 Componentes Principais
+👤 Jogador
+Movimentação com teclado
 
-Componentes Principais
+Sprites para correr, pular, se machucar e morrer
 
-1. Player (Jogador)
+Interação com inimigos e moedas
 
-Controlado por teclado (WASD ou setas).
+👾 Inimigos (Ex: bolhas de gosma)
+Comportamento de patrulha
 
-Possui sprites para diferentes estados: parado, correndo, machucado e morto.
+Mudam de comportamento ao detectar o jogador
 
-Pode pular, se mover e interagir com inimigos e moedas.
+Podem ser derrotados pulando sobre eles
 
-2. Inimigos
+💰 Moedas
+Espalhadas pelo mapa
 
-Exemplo: "Skelly" (Esqueleto).
+Coletáveis para avançar ao próximo nível
 
-Possuem comportamentos simples de patrulhamento.
+🗺️ Níveis
+Baseados em mapas com tiles de 16x16 pixels
 
-Têm sprites para andar, atacar e morrer.
+Contêm plataformas, moedas e inimigos
 
-3. Moedas
+Progresso ao completar os objetivos
 
-Dispostas no cenário.
+🧠 HUD (Painel de Informações)
+Corações (vidas)
 
-Ao serem coletadas, aumentam a barra de progresso do nível.
+Barra de progresso das moedas coletadas
 
-4. Níveis
+Botões de pausa e reinício
 
-Representados por mapas com tiles (16x16 px).
+⚙️ Mecânicas
+Gravidade aplicada ao jogador e inimigos
 
-Cada nível possui um background, plataformas, moedas e inimigos.
+Colisão manual com plataformas e objetos
 
-Avanço automático ao coletar todas as moedas.
+Animações por frames, baseadas em contadores
 
-5. HUD (Heads-Up Display)
+Sistema de vida e morte com reinício automático
 
-Exibe corações (vidas), barra de progresso de moedas e informações de jogo.
+Transição entre níveis ao completar objetivos
 
-Mecânicas do Jogo
+🔊 Áudio
+Inclui efeitos e música de fundo:
 
-Gravidade: Aplicada ao jogador e inimigos para simular queda.
-
-Colisão com plataformas: Verificações manuais para detectar se o jogador está pisando ou batendo em blocos.
-
-Animações: Alternação de frames com base em um contador (animationSpeed).
-
-Morte e Ressurreição: O jogador pode morrer ao ser atingido, e é reiniciado com vidas.
-
-Sistema de Som
-
-Inclui efeitos de morte, vitória e uma trilha sonora de fundo:
-
+js
+Copiar
+Editar
 const backgroundMusic = new Audio('./audio/mystic_journey.mp3');
 backgroundMusic.loop = true;
-backgroundMusic.volume = 1.0; // Volume ajustado
+backgroundMusic.volume = 1.0;
+🎵 Trilha sonora ambiente
 
-Controles
+💥 Efeitos de morte e vitória
 
-W / ArrowUp: Pular
+📌 Observações para Desenvolvedores
+Muitos parâmetros do jogo, como:
 
-A / ArrowLeft: Mover para a esquerda
+Gravidade
 
-D / ArrowRight: Mover para a direita
+Velocidade do personagem
 
-Espaço: (Reserva para ataque no futuro)
+Vida máxima
 
+Poder de ataque
 
-
-Boa sorte :)
+Podem ser facilmente ajustados nas constantes do arquivo script.js, facilitando personalizações ou melhorias.
